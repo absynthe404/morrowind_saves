@@ -13,7 +13,7 @@ $saveFiles = "*.ess"
 #If you choose From...
 function choiceFrom
 {
-    $fromSwitch=Read-Host "`r`nMST will now attempt to compress your Morrowind from:`r`n`r`n`t$saveFolder`r`n`r`nto a .zip archive at:`r`n`r`n`t$zipArchive`r`n`r`nDo you want to continue? Please make sure the specified file paths are correct before proceeding. [Y]es/[N]o/[B]ack"
+    $fromSwitch=Read-Host "`r`nMST will now attempt to compress your Morrowind saves from:`r`n`r`n`t$saveFolder`r`n`r`nto a .zip archive at:`r`n`r`n`t$zipArchive`r`n`r`nDo you want to continue? Please make sure the specified file paths are correct before proceeding. [Y]es/[N]o/[B]ack"
     Switch ($fromSwitch)
     {
         Y {Compress-Archive -Path $saveFiles -DestinationPath $zipArchive -Force}
